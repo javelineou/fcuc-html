@@ -1,0 +1,378 @@
+*{
+	padding: 0;
+	margin: 0;
+	text-decoration: solid;
+	list-style: solid;
+	box-sizing: border-box;
+}
+body{
+	font-family: 'Alata';
+	background-color: #384e18;
+	background-image: url("../bg.png");
+}
+/* navbar */
+nav{
+	background: #313332;
+	width: 100%;
+	height: 110px;
+}
+img.logo{
+	width:auto;
+	height:60px;
+	margin-left:20px;
+	margin-top:20px;
+	cursor:pointer;
+}
+nav ul{
+	float:right;
+	margin-right:100px;
+}
+nav ul li{
+	display:inline-block;
+	margin:0 30px;
+	line-height:100px;
+}
+nav ul li a{
+	color: white;
+	font-size: 22px;
+	text-transform:uppercase;
+	border-radius:10px;
+	padding: 7px 10px;
+}
+ul a:hover{
+	background: #636363;
+	transition: .5s;
+}
+.checkbtn{
+	font-size:30px;
+	float:right;
+	line-height:100px;
+	margin-right:40px;
+	color:white;
+	cursor:pointer;
+	display:none;
+}
+#check{
+	display:none;
+}
+
+article{
+	color:white;
+	position:relative;
+}
+#contactimg{
+	float:right;
+	margin-right:90px;
+	margin-top:140px;
+}
+article h1{
+	font-size:50px;
+	margin-left:120px;
+	margin-top:80px;
+}
+article h2{
+	font-size:50px;
+	margin-left:120px;
+}
+article p{
+	margin-left:125px;
+	margin-right:140px;
+	text-align:justify;
+}
+#hmobile{
+	display:none;
+}
+.teams{
+	margin:100px auto;
+	display:grid;
+	grid-template-columns: 100px repeat(3, 1fr) 100px;
+	grid-template-rows: repeat(2, 1fr) repeat(3, 0);
+	grid-column-gap: 20px;
+	grid-row-gap:20px;
+}
+.team1{
+	grid-area: 1 / 2 ;
+
+}
+.team2{
+	grid-area: 1 / 3 ;
+
+}
+.team3{
+	grid-area: 1 / 4 ;
+
+}
+.team4{
+	grid-area: 2 / 2 ;
+
+}
+.team5{
+	grid-area: 2 / 3 ;
+
+}
+.team6{
+	grid-area: 2 / 4 ;
+
+}
+.detail1 p{
+	margin-left:85px;
+}
+.detail2 p{
+	margin-left:120px;
+}
+.detail3 p{
+	margin-left:105px;
+}
+.detail4 p{
+	margin-left:85px;
+}
+.detail5 p{
+	margin-left:95px;
+}
+.detail6 p{
+	margin-left:80px;
+}
+.pic:hover{
+	transform:scale(1.2);
+	z-index:2;
+	transition:1s;
+}
+
+
+
+
+form{
+	margin-left:150px;
+	margin-top:50px;
+}
+input[type=text], [type=number], [type=email], select{
+	width:34%;
+	height:30px;
+	border:2px solid #737272;
+	border-radius:4px;
+	box-sizing: border-box;
+}
+input[type=submit]{
+	width:34%;
+	height:35px;
+	background-color:#52527a;
+	color:white;
+	font-family: 'Alata';
+	border-radius:10px;
+	cursor:pointer;
+}
+input[type=submit]:hover{
+	background-color:#33334d;
+}
+form .asterisk{
+	color:maroon;
+	font-size:15px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: solid;
+  margin: 0;
+}/* to make the arrow/slider on number input gone */
+
+footer{
+	position:relative; /* kalo relative, article ato isi web harus penuh, soalnya ga nempel dibawah. kalo fixed jadinya sticky	*/
+	bottom:0;
+	width:100%;
+	background:#313332;
+	color:white;
+	font-family: 'Alata';
+}
+.main{
+	display:flex;
+}
+.main .box{
+	flex-basis:50%;
+	padding:20px 40px;
+}
+.phone{
+	padding:10px 0;
+}
+
+@media(max-width: 1225px){
+	article img{
+		transform:scale(0.8,0.8);
+	}
+	.detail{
+	text-align:center;
+}
+}
+@media(max-width: 1220px){
+	input[type=text], [type=number], [type=email], select{
+		width:28%;
+	}
+	textarea{
+		width:28%;
+	}
+	input[type=submit]{
+		width:28%;
+	}
+}
+
+@media(max-width: 1094px){
+	#contactimg{
+	display:none;
+	}	
+	article h1{
+		margin:80px 200px;
+	}
+	form{
+		margin:50px 300px;
+	}
+	input[type=text], [type=number], [type=email], select{
+		width:350px;
+		height:35px;
+	}
+	textarea{
+		width:350px;
+	}
+	input[type=submit]{
+		width:350px;
+		height:40px;
+	}
+}
+
+
+@media(max-width: 992px) {
+	img.logo{
+		width:auto;
+		height:40px;
+		margin-top:34px;
+	}
+	nav ul li a{
+		font-size:16px;
+	}
+	.teams{
+		display: grid;
+	grid-template-columns: 50px 1fr 50px;
+	grid-template-rows: repeat(6, 1fr);
+	grid-column-gap: 0px;
+	grid-row-gap: 20px;
+	}
+	.team1{
+	grid-area: 1 / 2;
+	}
+	.team2{
+	grid-area: 2 / 2;
+	}
+	.team3{
+	grid-area: 3 / 2;
+	}
+	.team4{
+	grid-area: 4 / 2;
+	}
+	.team5{
+	grid-area: 5 / 2;
+	}
+	.team6{
+	grid-area: 6 / 2;
+	}
+	.pic{
+	padding:0 300px;
+	}
+	.teams p{
+		text-align:center;
+	}
+}
+@media (max-width:858px){
+	img.logo{
+		height:30px;
+		margin-top:24px;
+	}
+	.checkbtn{
+		display:block;
+		line-height:80px;
+	}
+	ul{
+		position:fixed;
+		width:100%;
+		height:100vh;
+		background:#5596c2;
+		top:80px;
+		left:-100%;
+		transition: all .5s;
+		text-align:right;
+		z-index:1;
+	}
+	nav ul li{
+		display:block;
+	}
+	nav ul li a{
+		font-size:20px;
+	}
+	ul a:hover{
+		background:none;
+		color:#313332;
+	}
+	#check:checked ~ ul{
+		left:0;
+	}
+	article h1{
+		margin:80px 200px;
+	}
+	form{
+		margin:50px 240px;
+	}
+	.pic{
+		padding:0 220px;
+	}
+	.rslides{
+		display:none;
+	}
+	#hmobile{
+		display:initial;
+		width: 100%;
+		max-width: 300px;
+		height: auto;
+		margin-left:95px;
+	}
+}
+
+@media (max-width:783px){
+	.box{
+		font-size:10px;
+	}
+	footer .social{
+		display:flex;
+	}
+	form{
+		margin:50px 200px;
+	}
+	.pic{
+		padding:0 200px;
+	}
+}
+@media (max-width:600px){
+	article h1{
+		font-size:31px;
+		margin-left:120px;
+		margin-bottom:10px;
+	}
+	article h2{
+		font-size:31px;
+	}
+	article p{
+		font-size:13px;
+	}
+	form{
+		margin: 50px 100px;
+	}
+	input[type=text], [type=number], [type=email], select{
+		width:240px;
+		height:35px;
+	}
+	textarea{
+		width:240px;
+	}
+	input[type=submit]{
+		width:240px;
+		height:40px;
+	}
+	.pic{
+		padding:0 70px;
+	}
+}
